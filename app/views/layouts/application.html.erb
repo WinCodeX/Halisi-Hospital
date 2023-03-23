@@ -13,7 +13,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+    <body>
+      <header>
+        <%= render "layouts/nav/home" %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </header>
     <%= yield %>
   </body>
 
