@@ -8,9 +8,18 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= render "shared/css" %>
   </head>
-
+  <% if ["public","devise"].include?(controller.controller_name) %>
+  <header>
+  <%= render "layouts/nav/public" %>
+  </header>
+  <% else %>
+  <%= render "layouts/nav/dashboard" %>
+  <% end %>
   <body>
     <%= yield %>
+    <%= render "shared/js" %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
