@@ -45,6 +45,16 @@ body{
   background: var(--color-dark);
   color: var(--color-white);
 }
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background-color: #111e88;
+  height: 33vh;
+  border-radius: var(--card-border-radius);
+
+}
  
  /* form for sign in / up */
  .form-sign {
